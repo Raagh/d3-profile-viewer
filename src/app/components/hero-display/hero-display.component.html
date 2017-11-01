@@ -1,0 +1,22 @@
+<!-- <img [src]="itemUrl" alt="..." class="img-rounded"> -->
+<div class="profile-sheet">
+
+    <div class="paperdoll" *ngFor="let hero of heroes">
+        <ul class="gear-slots row">
+            <div>
+                <label for="">{{hero.Name}}</label>
+                <img src="{{hero.PortraitUrl}}" alt="Hero Icon">
+            </div>
+            <li class="slot-{{item.Position}}" *ngFor="let item of hero.EquippedItems">
+                <a class="slot-link" href="{{item.TooltipUrl}}">
+                    <span class="d3-icon d3-icon-item d3-icon-item-{{item.DisplayColor}}">
+                        <span class="imager">
+                            <img src="{{item.IconUrl}}" alt="" />
+                        </span>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>

@@ -1,0 +1,122 @@
+* {
+    font-family: Helvetica;
+    color: #FFFFFF;
+  }
+  
+  body {
+    background-color: #1a1e24;
+  }
+  
+  h1 {
+    margin: 0 auto;
+    margin-top: 5%;
+    padding-left: 0%;
+  }
+  
+  #subheading {
+    padding: 0% 5% 0% 5%;
+    text-align: center;
+  }
+  
+  span {
+    padding: 2%;
+  }
+  
+  img {
+    width: 45px;
+    height: 45px;
+  }
+  
+  a, a:visited, a:hover {
+    text-decoration: none;
+    color: white;
+  }
+  
+  #main {
+    padding-top: 5%;
+    margin: 0 auto;
+    width: 80%;
+    height: 100px;
+  }
+  
+  .flex-justify-center {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .build-results {
+    display: inline-block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 75%;
+    padding-top: 5px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #252a33;
+    border: solid black;
+  }
+  
+  /* react-select overriding styles*/
+  .Select-placeholder {
+    color: #FFF;
+    text-transform: capitalize;
+  }
+  
+  .Select-menu-outer {
+    margin: 0 auto;
+    width: 100%;
+    border:none;
+    background: transparent;
+  }
+  
+  .Select-menu-outer:hover {
+    background: transparent;
+  }
+  
+  .Select-menu {
+    margin: 0 auto;
+    width: 75%;
+    border: solid white;
+    border-radius: 10px;
+    background: #252a33;
+  }
+  
+  .Select-option {
+    text-align: center;
+    background-color: #252a33;
+    color: #FFFFFF;
+  }
+  
+  .Select-option.is-focused {
+    color: #FFFFFF;
+  }
+  
+  .Select-control {
+    margin: 0 auto;
+    margin-bottom: 5px;
+    width: 75%;
+    padding-top: 5px;
+    text-align: center;
+    border: solid black;
+    border-radius: 10px;
+    background-color: #252a33;
+  }
+  
+  .Select-control:hover {
+    border: solid white;
+  }
+  
+  @media (min-width: 1000px) {
+    .Select-control {
+      width: 35%;
+    }
+    .Select-menu {
+      width: 35%;
+    }
+  
+    .build-results {
+      width: 35%;
+    }
+  }
+  

@@ -1,0 +1,11 @@
+.table th {
+    text-align: center;   
+ }
+
+.ul li {
+     display:inline;
+ }
+ 
+ ul {
+    list-style-type: none;
+  }

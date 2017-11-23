@@ -23,6 +23,4 @@ export class ItemsService {
                 return items;
             });
     }
-
-
 }

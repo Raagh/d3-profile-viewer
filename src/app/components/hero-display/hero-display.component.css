@@ -5,7 +5,268 @@
 .ul li {
      display:inline;
  }
- 
+
  ul {
     list-style-type: none;
-  }
+}
+
+.barbarian-male{
+    background-image: url('https://us.battle.net/d3/static/images/profile/hero/paperdoll/barbarian-male.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.barbarian-female{
+    background-image: url('https://us.battle.net/d3/static/images/profile/hero/paperdoll/barbarian-female.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.witch-doctor-male{
+    background-image: url('https://us.battle.net/d3/static/images/profile/hero/paperdoll/witch-doctor-female.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.witch-doctor-female{
+    background-image: url('https://us.battle.net/d3/static/images/profile/hero/paperdoll/witch-doctor-female.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* slots */
+.gear-slots { position: relative; width: 305px; height: 425px; margin-bottom: 6px; right:118px; }
+.gear-slots li { position: absolute; display: block; outline: none; height: 88px; width: 66px; text-align: center; }
+.gear-slots li .slot-link { display:block; height: 86px; width: 64px; margin:1px; }
+.gear-slots li .image { display: block; width: 100%; height: 100%; overflow:hidden; }
+.gear-slots li .image img { position: relative; }
+.gear-slots li .d3-icon { position: absolute; top: 0; left: 0; display: block }
+.gear-slots li .d3-icon .icon-item-inner { display: block; height: 84px; width: 62px; }
+.gear-slots li .remove { top: 2px; left: 2px; }
+.gear-slots li .goto { top: 18px; left: 2px; }
+.gear-slots li.equipped:hover a { display: block; }
+
+.gear-slots li .sockets-wrapper { width:100%; height:100%; display:block; position:absolute; top:0; left:0; opacity:0.8 }
+.gear-slots li a:hover .sockets-wrapper { opacity:1 }
+.gear-slots li .sockets-wrapper .sockets-align { height: 88px; width: 66px; display:table-cell; vertical-align:middle }
+.gear-slots li .sockets-wrapper .socket .gem { margin:6px auto 0;  width:20px; height:20px }
+
+/* slot sizes */
+.gear-slots .slot-head,
+.gear-slots .slot-head .sockets-wrapper .sockets-align { width: 66px; height: 66px; }
+.gear-slots .slot-head .slot-link { width:64px; height:64px }
+.gear-slots .slot-head .d3-icon .icon-item-inner { width: 62px; height: 62px; }
+
+.gear-slots .slot-torso,
+.gear-slots .slot-torso .sockets-wrapper .sockets-align { width: 82px; height: 115px; }
+.gear-slots .slot-torso .slot-link { width:80px; height:113px }
+.gear-slots .slot-torso .d3-icon .icon-item-inner { width: 78px; height: 111px; }
+
+.gear-slots .slot-neck,
+.gear-slots .slot-neck .sockets-wrapper .sockets-align { width: 56px; height: 56px; }
+.gear-slots .slot-neck .slot-link { width:54px; height:54px }
+.gear-slots .slot-neck .d3-icon .icon-item-inner { width: 52px; height: 52px; }
+
+.gear-slots .slot-waist,
+.gear-slots .slot-waist .sockets-wrapper .sockets-align { width: 82px; height: 34px; }
+.gear-slots .slot-waist .slot-link { width:80px; height:32px }
+.gear-slots .slot-waist .d3-icon .icon-item-inner { width: 78px; height: 30px; }
+
+.gear-slots .slot-leftFinger,
+.gear-slots .slot-rightFinger,
+.gear-slots .slot-leftFinger .sockets-wrapper .sockets-align,
+.gear-slots .slot-rightFinger .sockets-wrapper .sockets-align { width: 42px; height: 42px; }
+.gear-slots .slot-leftFinger .slot-link,
+.gear-slots .slot-rightFinger .slot-link { width:40px; height:40px }
+.gear-slots .slot-leftFinger .d3-icon .icon-item-inner,
+.gear-slots .slot-rightFinger .d3-icon .icon-item-inner { width: 38px; height: 38px; }
+
+.gear-slots .slot-offHand .disabled-off-hand .image { opacity:0.3; }
+.gear-slots .slot-offHand .disabled-off-hand .image img { top:1px; }
+
+.gear-slots .slot-offHand,
+.gear-slots .slot-mainHand,
+.gear-slots .slot-offHand .sockets-wrapper .sockets-align,
+.gear-slots .slot-mainHand .sockets-wrapper .sockets-align { width: 66px; height: 130px; }
+.gear-slots .slot-mainHand .slot-link,
+.gear-slots .slot-offHand .slot-link { width:64px; height:128px }
+.gear-slots .slot-offHand .d3-icon .icon-item-inner,
+.gear-slots .slot-mainHand .d3-icon .icon-item-inner { width: 62px; height: 126px; }
+
+/* slot image fixes */
+.gear-slots .slot-shoulders .image img { top: 10px; }
+.gear-slots .slot-neck .image img { width: 52px; height: 52px; top:1px; }
+.gear-slots .slot-torso .image img { top:15px; left:-1px; }
+.gear-slots .slot-waist .image img { top: -5px; }
+.gear-slots .slot-hands .image img { top: 10px; }
+.gear-slots .slot-bracers .image img { top: 10px; }
+.gear-slots .slot-leftFinger .image img{top: -4px; left:-1px; }
+.gear-slots .slot-rightFinger .image img { top: -4px; left: -1px; }
+.gear-slots .slot-legs .image img { top: 10px; }
+.gear-slots .slot-feet .image img { top: 10px; }
+.gear-slots .slot-mainHand .image img { top: 20px; }
+.gear-slots .slot-offHand .image img { top: 20px; }
+.gear-slots .slot-head .image,
+.gear-slots .slot-shoulders .image,
+.gear-slots .slot-feet .image,
+.gear-slots .slot-bracers .image,
+.gear-slots .slot-hands .image { overflow:visible; }
+.gear-slots .slot-shoulders { clip:rect(-19px, 76px, 99px, -10px); clip:rect(-19px 76px 99px -10px); }
+.gear-slots .slot-hands { clip:rect(-19px, 76px, 100px, -10px); clip:rect(-19px 76px 100px -10px); }
+
+/* slot positioning */
+.gear-slots .slot-head { z-index:12; top: 25px; left: 190px; }
+.gear-slots .slot-shoulders { z-index:10; top: 50px; left: 105px; }
+.gear-slots .slot-neck { z-index:1; top: 70px; right: -40px; }
+.gear-slots .slot-torso { z-index:13; top: 100px; left: 190px; }
+.gear-slots .slot-hands { z-index:9; top: 160px; left: 75px; }
+.gear-slots .slot-bracers { z-index:3; top: 160px; right: -75px; }
+.gear-slots .slot-waist { z-index:4; top: 230px; left: 190px; }
+.gear-slots .slot-legs { z-index:11; bottom: 55px; left: 190px; }
+.gear-slots .slot-feet { z-index:8; bottom: -45px; left: 190px; }
+.gear-slots .slot-offHand { z-index:5; bottom: -45px; right: -75px; }
+.gear-slots .slot-mainHand { z-index:6; bottom: -45px; left: 75px; }
+.gear-slots .slot-leftFinger { z-index:2; bottom: 110px; left: 85px; }
+.gear-slots .slot-rightFinger { z-index:7; bottom: 110px; right: -65px; }
+
+/* slot item quality */
+.gear-slots .slot:hover .image { background: rgba(0, 0, 0, .20); }
+.gear-slots .slot.icon-active .image { background: rgba(0, 0, 0, .50); }
+.gear-slots .slot.slot-disabled .image { background: none; }
+
+.profile-body { padding: 1px 0; background: url("https://us.battle.net/d3/static/images/profile/hero/bg-stats.jpg") 50% 0 no-repeat; }
+.profile-lower { padding-top:1px; background: url("https://us.battle.net/d3/static/images/profile/hero/lower-bg.jpg") 50% 0 no-repeat; }
+
+
+/* sheet */
+.profile-sheet { height: 645px; position: relative; text-shadow: 1px 1px 0 #000; background-position: 50% 0; background-repeat: no-repeat; }
+.profile-sheet .name,
+.profile-sheet .class { width: 700px; position: absolute; top: 69px; right: 15px; text-align: center; line-height: 100%; text-shadow:none; }
+.zh-tw.ie9 .profile-sheet .name,
+.zh-tw.ie7 .profile-sheet .name { top:74px; }
+.profile-sheet .name { font-size:48px; color:#FFEAD4; text-transform:uppercase; line-height:47px; top: 68px;}
+.profile-sheet .name:first-letter { font-size:66px; vertical-align:bottom; line-height:48px; }
+.ie67 .profile-sheet .name:first-letter,
+.zh-tw .profile-sheet .name:first-letter,
+.ko-kr .profile-sheet .name:first-letter { font-size:48px; vertical-align:baseline; }
+.profile-sheet .class { top: 90px; right:50px  }
+.profile-sheet .class a { display: inline-block; font-size: 14px; color:#d4b473; font-family:"Palatino Linotype","Times",serif; text-transform:none; }
+.profile-sheet .class a strong { font-family: Arial, sans-serif; }
+.profile-sheet .class a strong.d3-color-hardcore { font-family:"Palatino Linotype","Times",serif; }
+.profile-sheet .class a .small-seasonal-leaf { margin-left: 4px; margin-top: -2px; }
+.profile-sheet .class a:hover { color: #fff; }
+.profile-sheet .class a > * { float: left; }
+.profile-sheet .class a > * + * { margin-left: 4px; }
+.profile-sheet .paragon-level { font-weight:normal; color:#a791c2; letter-spacing:-0.1em; padding-left:3px; }
+.profile-sheet .dps { position: absolute; top: 30px; right: 30px; }
+.profile-sheet .life { position: absolute; top: 30px; left: 295px; }
+.profile-sheet .dps .term,
+.profile-sheet .life .term { font-size: 13px; font-weight: normal; vertical-align: middle; text-transform: uppercase; position: relative; top: -5px; color: #ac9374; }
+.profile-sheet .dps .value,
+.profile-sheet .life .value { font-size: 32px; font-weight: bold; color: #ac9374; }
+
+.profile-sheet .gear-bonuses { width: 225px; position: absolute; left: 30px; top: 360px; }
+.profile-sheet .gear-bonuses .tip { border:0; }
+.profile-sheet .gear-bonuses p { margin:0; padding-top:0px; line-height:15px;}
+.ie6 .profile-sheet .gear-bonuses .header-3 { background:none }
+.profile-sheet .gear-bonuses ul { margin: 5px 0; padding-left:8px }
+.profile-sheet .gear-bonuses li { padding:0; /*min-height:24px;*/ margin-top:11px; }
+.profile-sheet .gear-bonuses li a { font-size: 12px; /*opacity: .75;*/ display:block; color:#a99fff; padding-left:20px; }
+.profile-sheet .gear-bonuses li a:hover, .profile-sheet .gear-bonuses li a:hover .value { color:#FFF; }
+.profile-sheet .gear-bonuses li a .value { color:#d0ccff; }
+.profile-sheet .gear-bonuses li:first-child { margin-top:0; margin-bottom:-1px; }
+.profile-sheet .gear-bonuses li:first-child a { font-size: 16px; opacity: 1; }
+.profile-sheet .gear-bonuses li:first-child p { padding-top:0; line-height:20px; }
+.profile-sheet .gear-bonuses .view-more { font-style: italic; color: #948474; padding-left:30px; }
+.profile-sheet .gear-bonuses .view-more:hover { color: #7B6D55; }
+.profile-sheet .gear-bonuses li:first-child .bonus-radio {top:1px;}
+.profile-sheet .gear-bonuses .bonus-radio.active { background-position: 0 0; }
+
+.profile-sheet .character li { margin-bottom: 10px; border-radius: 3px; padding: 3px 3px 2px 3px; text-shadow: 1px 1px 0 #000; }
+.profile-sheet .character li b { color: #F3E6D0; display: inline-block; width: 25%; text-align: right; margin-right: 2px; }
+.profile-sheet .character li.life { background: rgba(116, 29, 0, .4); border-top:  1px solid #831f08; }
+
+.profile-sheet .d3-color-yellow { color: #ffff00 !important; }
+.profile-sheet .d3-color-orange { color: #fba412 !important; }
+.profile-sheet .d3-color-blue { color: #a0c3ff !important; }
+.profile-sheet .d3-color-green { color: #a4df44 !important; }
+.profile-sheet .d3-color-gray { color: #c1c1c1 !important; }
+
+/* paper doll */
+.paperdoll { width: 725px; min-height: 490px; right: 4px; top: 155px; position: absolute; }
+.paperdoll .weapon-flourish { width:128px; height:166px; background-repeat:no-repeat; position:absolute; }
+.paperdoll .weapon-flourish.main-hand-flourish { top:258px; left:200px; }
+.paperdoll .weapon-flourish.off-hand-flourish { top:258px; left:416px; }
+.ie6 .paperdoll .weapon-flourish { display:none; }
+
+.paperdoll .gear-slots { margin: 0 0 0 209px; position: relative; z-index: 3; }
+.paperdoll .gear-slots .d3-icon-item { box-shadow: 0 0 9px rgba(0,0,0,0.09), 0 2px 5px rgba(0,0,0,0.5); }
+.followers .d3-icon-item, .followers .icon-item-gradient, .followers .icon-item-inner { border-radius:3px; }
+.paperdoll .gear-slots .item-dye img { width:19px; height:19px; }
+.paperdoll .gear-slots .item-transmog { display:block; position:absolute; top:0; right:0; padding:4px; }
+.paperdoll .gear-slots .empty-icon { cursor:help; box-shadow:none; border:none; padding:1px; }
+.paperdoll .gear-slots .empty-icon .icon-item-inner { box-shadow:none; border:0; padding:1px; }
+
+.paperdoll .gear-labels { width: 726px; min-height: 490px; position: absolute; top: 0; left: 0; z-index: 2; }
+.paperdoll .gear-labels .gear-label { position: absolute; width: 186px; font-size: 11px; padding-right: 5px; }
+.paperdoll .gear-labels .gear-label .label-link { display: block; }
+.paperdoll .gear-labels .gear-label .item-name { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:186px; display:block; }
+.paperdoll .gear-labels .bonus-value,
+.paperdoll .gear-labels .weapon-dps { display:block; color:#c4b9a7; font-size:14px; text-shadow:1px 1px 0 #000; position:relative;}
+.paperdoll .gear-labels .weapon-dps { color:#c6aa75; font-size:11px; margin-bottom:-4px; top:-2px;}
+.paperdoll .gear-labels .weapon-dps .value { font-size:16px; }
+.paperdoll .gear-labels .bonus-value.long-bonus { font-size:11px; line-height:12px; top:2px;}
+.paperdoll .gear-labels .bonus-value p { margin:0; }
+.paperdoll .gear-labels .bonus-value p .value { font-size:14px; color:#d7cbb7; }
+.paperdoll .gear-labels .slot-head,
+.paperdoll .gear-labels .slot-neck,
+.paperdoll .gear-labels .slot-bracers,
+.paperdoll .gear-labels .slot-waist,
+.paperdoll .gear-labels .slot-feet,
+.paperdoll .gear-labels .slot-rightFinger,
+.paperdoll .gear-labels .slot-offHand { right: 0; }
+.paperdoll .gear-labels .slot-shoulders,
+.paperdoll .gear-labels .slot-torso,
+.paperdoll .gear-labels .slot-hands,
+.paperdoll .gear-labels .slot-legs,
+.paperdoll .gear-labels .slot-leftFinger,
+.paperdoll .gear-labels .slot-mainHand { text-align: right; left: 0; }
+.paperdoll .gear-labels .slot-head { top: 6px; }
+.paperdoll .gear-labels .slot-neck { top: 75px; }
+.paperdoll .gear-labels .slot-bracers { top: 144px; }
+.paperdoll .gear-labels .slot-waist { top: 213px; }
+.paperdoll .gear-labels .slot-rightFinger { top: 274px; }
+.paperdoll .gear-labels .slot-offHand { top: 340px; }
+.paperdoll .gear-labels .slot-feet { top: 423px; }
+.paperdoll .gear-labels .slot-shoulders { top: 30px; }
+.paperdoll .gear-labels .slot-torso { top: 99px; }
+.paperdoll .gear-labels .slot-hands { top: 168px; }
+.paperdoll .gear-labels .slot-leftFinger { top: 237px; }
+.paperdoll .gear-labels .slot-legs { top: 301px; }
+.paperdoll .gear-labels .slot-mainHand { top: 376px; }
+.paperdoll .gear-labels .item-effects { margin-top:0; font-size:11px; }
+.paperdoll .gear-labels .item-effects li { white-space:nowrap; }
+.paperdoll .gear-labels .item-effects li.full-socket { padding-top:0; }
+.paperdoll .gear-labels .item-effects li .gem { float:none; display:inline-block; margin-bottom:-4px; }
+.paperdoll .gear-labels .item-effects li .socket-effect { background:none; padding-left:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:150px; }
+
+.paperdoll .d3-icon-item-gray { border-color: #56402c; }
+.paperdoll .d3-icon-item-white { border-color: #56402c; }
+.paperdoll .d3-icon-item-blue { border-color: #6ba9ba; }
+.paperdoll .d3-icon-item-yellow { border-color: #b1a73c; }
+.paperdoll .d3-icon-item-orange { border-color: #c29337; }
+.paperdoll .d3-icon-item-green { border-color: #87a73d; }
+
+.paperdoll .gear-lines { width: 332px; height: 418px; position: absolute; top: 14px; left: 197px; z-index: 1; }
+.paperdoll .gear-lines .slot-head { width: 134px; height: 1px; top: 0; right: 0; background-position: 100% 0; }
+.paperdoll .gear-lines .slot-waist { width: 124px; height: 12px; top: 196px; right: 0; background-position: 100% -196px; }
+.paperdoll .gear-lines .slot-torso { width: 125px; height: 24px; top: 84px; left: 0; background-position: 0 -84px; }
+.paperdoll .gear-lines .slot-shoulders { width: 51px; height: 1px; top: 24px; left: 0; background-position: 0 -24px; }
+.paperdoll .gear-lines .slot-neck { width: 59px; height: 1px; top: 69px; right: 0; background-position: 100% -69px; }
+.paperdoll .gear-lines .slot-leftFinger { width: 37px; height: 1px; top: 231px; left: 0; background-position: 0 -231px; }
+.paperdoll .gear-lines .slot-rightFinger { width: 37px; height: 28px; top: 241px; right: 0; background-position: 100% -241px; }
+.paperdoll .gear-lines .slot-hands { width: 25px; height: 1px; top: 162px; left: 0; background-position: 0 -162px; }
+.paperdoll .gear-lines .slot-bracers { width: 25px; height: 1px; top: 138px; right: 0; background-position: 100% -138px; }
+.paperdoll .gear-lines .slot-legs { width: 133px; height: 35px; top: 261px; left: 0; background-position: 0 -261px; }
+.paperdoll .gear-lines .slot-feet { width: 166px; height: 21px; bottom: 0; right: 0; background-position: 100% 100%; }
+.paperdoll .gear-lines .slot-mainHand { width: 25px; height: 1px; top: 370px; left: 0; background-position: 0 -370px; }
+.paperdoll .gear-lines .slot-offHand { width: 25px; height: 1px; top: 334px; right: 0; background-position: 100% -334px; }
+

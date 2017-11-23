@@ -1,16 +1,16 @@
 <div class="container">
-	<header class="text-center">
-		<h3>D3 Profile Viewer</h3>
-	</header>
-	<div class="form text-center">
-		<input class="form-control" type="text" placeholder="username" [(ngModel)]="searchUser">
-		<br/>
-		<button class="btn btn-primary btn-lg" name="searchButton" (click)="onSearchButtonClick()">Find User!</button>
-		<br/>
-		<br/>
+    <header class="text-center">
+        <h3>D3 Profile Viewer</h3>
+    </header>
+    <div class="form text-center">
+        <input class="form-control" type="text" placeholder="username" [(ngModel)]="searchUser">
+        <br/>
+        <button class="btn btn-primary btn-lg" name="searchButton" (click)="onSearchButtonClick()">Find User!</button>
+        <br/>
+        <br/>
 
-		<div *ngIf="user">
-			<app-hero-display *ngIf="userHeroes" [heroes]="userHeroes"></app-hero-display>
-		</div>
-	</div>
+        <div *ngIf="user">
+            <app-hero-display *ngIf="userHeroes" [heroes]="userHeroes"></app-hero-display>
+        </div>
+    </div>
 </div>

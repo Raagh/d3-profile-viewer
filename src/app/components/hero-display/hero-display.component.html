@@ -1,22 +1,33 @@
-<!-- <img [src]="itemUrl" alt="..." class="img-rounded"> -->
-<div class="profile-sheet">
+<ngb-tabset>
+    <ngb-tab title="{{hero.Name}}" *ngFor="let hero of heroes">
+        <ng-template ngbTabContent>
+            <div class="{{hero.Class}}-{{hero.Gender}}">
+                <div class="profile-sheet">
+                    <h2 class="class">
+                        {{hero.Class}}
+                    </h2>
+                    <div class="paperdoll" id="paperdoll">
+                        <ul class="gear-slots">
+                            <li class="slot-{{item.Position}}" *ngFor="let item of hero.EquippedItems">
+                                <a class="slot-link" href="{{item.TooltipUrl}}">
+                                    <span class="d3-icon d3-icon-item d3-icon-item-{{item.DisplayColor}}">
+                                        <span class="icon-item-gradient">
+                                            <span class="icon-item-inner"></span>
+                                        </span>
+                                    </span>
+                                    <span class="image">
+                                        <img src="{{item.IconUrl}}" alt="Item Icon" />
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gear-bonuses" id="bonuses">
 
-    <div class="paperdoll" *ngFor="let hero of heroes">
-        <ul class="gear-slots row">
-            <div>
-                <label for="">{{hero.Name}}</label>
-                <img src="{{hero.PortraitUrl}}" alt="Hero Icon">
+                    </div>
+                </div>
+                <div class="profile-lower">DESCRIPTION</div>
             </div>
-            <li class="slot-{{item.Position}}" *ngFor="let item of hero.EquippedItems">
-                <a class="slot-link" href="{{item.TooltipUrl}}">
-                    <span class="d3-icon d3-icon-item d3-icon-item-{{item.DisplayColor}}">
-                        <span class="imager">
-                            <img src="{{item.IconUrl}}" alt="" />
-                        </span>
-                    </span>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-</div>
+        </ng-template>
+    </ngb-tab>
+</ngb-tabset>

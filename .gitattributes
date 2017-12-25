@@ -1,2 +1,3 @@
 src/css/* linguist-vendored
 src/js/* linguist-vendored
+*.js linguist-vendored
